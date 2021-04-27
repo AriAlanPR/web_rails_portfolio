@@ -1,33 +1,83 @@
+<h1 class="rounded">Hello, my name is Ari Alan Pérez Romero</h1>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Presentations</h1>
+<div class="container container-fluid">
+  <div class="row">
+    <div class="col">
+      <h3 class="mycenter">Knowledge</h3>
+    </div>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Subtitle</th>
-      <th>Content</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="row">
+    <div class="col">
+      · iOS Developer  
+    </div>
+    <div class="col">
+      · Android Developer
+    </div>
+    <div class="col">
+      · Web Developer
+    </div>
+    <div class="col">
+      · Full Stack Engineer
+    </div>
+    <div class="col">
+      · Mobile Application Developer
+    </div>    
+  </div>
 
-  <tbody>
+  <div class="row">
+    <div class="col">
+      <h3 class="mycenter">Works</h3>
+    </div>
+  </div>
+
+  <div class="row">
     <% @presentations.each do |presentation| %>
-      <tr>
-        <td><%= presentation.title %></td>
-        <td><%= presentation.subtitle %></td>
-        <td><%= presentation.content %></td>
-        <td><%= presentation.image %></td>
-        <td><%= link_to 'Show', presentation %></td>
-        <td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
-        <td><%= link_to 'Destroy', presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="col">
+        <%= presentation.title %>
+      </div>
+      <div class="col">
+        <a class="btn btn-outline-dark" href="<%= presentation.subtitle %>"> Open in Store </a>
+      </div>
+      <div class="col">
+        <%= presentation.content %>
+      </div>
+      <div class="col">
+        <img src="<%= presentation.image %>" />
+      </div>
+      <div class="col d-grid gap-2">
+        <div class="row ">
+          <div class="col">
+            <%= link_to 'Details', presentation, :class => "btn btn-outline-dark" %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <%= link_to 'Edit', edit_presentation_path(presentation), :class => "btn btn-outline-dark" %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <%= link_to 'Delete', presentation, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-dark" %>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
-<br>
+  <div class="row" style="padding-top:50px;padding-bottom:50px;">
+    <div class="card shadow-sm">
+      <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+    </div>
+  </div>
 
-<%= link_to 'New Presentation', new_presentation_path %>
+  <br>
+  
+  <div class="row mycenter" style="padding-bottom:50px;">
+    <%= link_to 'New Post', new_presentation_path, :class => "btn btn-outline-light", :style => "border: 1px solid black" %>
+  </div>
+</div>
+
+

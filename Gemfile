@@ -33,16 +33,17 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+#use postresql gem
+gem 'pg'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # Use postgres as the database for Active Record
-  gem 'pg'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
 end
 
 group :development do

@@ -57,13 +57,14 @@ class PresentationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_presentation
-      @presentation = Presentation.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def presentation_params
-      params.require(:presentation).permit(:title, :subtitle, :content, :image)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_presentation
+    @presentation = Presentation.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def presentation_params
+    params.require(:presentation).permit(:title, :subtitle, :content, :image)
+  end
 end

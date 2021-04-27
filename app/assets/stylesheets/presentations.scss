@@ -1,3 +1,22 @@
 // Place all the styles related to the Presentations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    text-align: center;
+    border: 3px solid green;
+}
+
+a {
+    text-decoration: none;
+    width:100%;
+}
+
+.mycenter {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    text-align: center;
+}
