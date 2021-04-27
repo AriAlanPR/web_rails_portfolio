@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Presentations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Content</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @presentations.each do |presentation| %>
+      <tr>
+        <td><%= presentation.title %></td>
+        <td><%= presentation.subtitle %></td>
+        <td><%= presentation.content %></td>
+        <td><%= presentation.image %></td>
+        <td><%= link_to 'Show', presentation %></td>
+        <td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
+        <td><%= link_to 'Destroy', presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Presentation', new_presentation_path %>
