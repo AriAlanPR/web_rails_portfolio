@@ -36,6 +36,11 @@ a {
     width: 100px;
 }
 
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
 .btn-text-black {
     color: black;
 }
