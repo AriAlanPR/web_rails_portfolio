@@ -41,7 +41,7 @@
             <%= presentation.title %>
           </div>
           <a href="<%= presentation.subtitle %>">
-            <% if presentation.image %>
+            <% unless presentation.image.blank? %>
               <img src="<%= presentation.image %>" class="card-img-top fullsize" alt="..." />
             <% else %>
               <svg class="svg-icon" viewBox="0 0 20 20">
