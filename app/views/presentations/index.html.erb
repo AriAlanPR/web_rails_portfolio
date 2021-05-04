@@ -62,9 +62,11 @@
 
   <br>
   
-  <div class="row mycenter" style="padding-bottom:50px;">
-    <%= link_to 'New Post', new_presentation_path, :class => "btn btn-outline-light", :style => "border: 1px solid black" %>
-  </div>
+  <% if params['trickdev'] %>
+    <div class="row mycenter" style="padding-bottom:50px;">
+        <%= link_to 'New Post', new_presentation_path, :class => "btn btn-outline-light", :style => "border: 1px solid black" %>
+    </div>
+  <% end %>
 </div>
 
 
